@@ -14,7 +14,7 @@
         <!-- GitHub Read Only URL scm:git:ssh://<readonly repo path> -->
         <connection>scm:git:ssh://github.com/dkirrane/mvnrelease.git</connection>
         <!-- GitHub Read Write URL scm:git:ssh://<readwrite repo path> -->
-        <developerConnection>scm:git:ssh://git@github.com:dkirrane/mvnrelease.git</developerConnection>
+        <developerConnection>scm:git:ssh://git@github.com/dkirrane/mvnrelease.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     <issueManagement>
