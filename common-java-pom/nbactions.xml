@@ -7,6 +7,8 @@
             <goal>release:clean</goal>
             <goal>release:prepare</goal>
             <goal>-B</goal>
+            <goal>-Dusername=desmond.kirrane@gmail.com</goal>
+            <goal>-Dpassword=pentium3</goal>
         </goals>
     </action>
     <action>
@@ -14,8 +16,6 @@
         <displayName>release:rollback</displayName>
         <goals>
             <goal>release:rollback</goal>
-            <goal>-s</goal>
-            <goal>settings.xml</goal>
         </goals>
     </action>
     <action>
@@ -23,8 +23,6 @@
         <displayName>release:clean</displayName>
         <goals>
             <goal>release:clean</goal>
-            <goal>-s</goal>
-            <goal>settings.xml</goal>
         </goals>
     </action>
     <action>
@@ -32,8 +30,8 @@
         <displayName>release:perform</displayName>
         <goals>
             <goal>release:perform</goal>
-            <goal>-Dusername=DarVar</goal>
-            <goal>-Dpassword=C1nOAMuB</goal>
+            <goal>-Dusername=desmond.kirrane@gmail.com</goal>
+            <goal>-Dpassword=pentium3</goal>
             <goal>-s</goal>
             <goal>settings.xml</goal>
         </goals>
