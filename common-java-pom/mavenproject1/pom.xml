@@ -4,11 +4,11 @@
     <parent>
         <groupId>com.mycompany.app</groupId>
         <artifactId>common-java-pom</artifactId>
-        <version>1.1-SNAPSHOT</version>
+        <version>1.2-SNAPSHOT</version>
     </parent>
     <groupId>com.mycompany.app</groupId>
     <artifactId>mavenproject1</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
     <name>mavenproject1</name>
     <url>http://maven.apache.org</url>
     <properties>
