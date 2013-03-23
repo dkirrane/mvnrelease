@@ -17,6 +17,13 @@
         <system>GitHub</system>
         <url>https://github.com/dkirrane/mvnrelease/issues/</url>
     </issueManagement>
+    <developers>
+        <developer>
+            <id>dkirrane</id>
+            <name>Desmond Kirrane</name>
+            <email>desmond.kirrane@gmail.com</email>
+        </developer>
+    </developers>
 
     <modules>
         <module>mavenproject1</module>
@@ -29,6 +36,22 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-changes-plugin</artifactId>
                     <version>2.9</version>
+                    <configuration>
+                        <issueManagementSystems>
+                            <issueManagementSystem>GitHub</issueManagementSystem>
+                        </issueManagementSystems>
+                        <smtpHost>smtp.gmail.com</smtpHost>
+                        <smtpPort implementation="java.lang.Integer">465</smtpPort>
+                        <sslMode>true</sslMode>
+                        <username>desmond.kirrane@gmail.com</username>
+                        <password></password>
+                        <!--                        <senderString>Your Name <you@domain></senderString>-->
+                        <fromDeveloperId>dkirrane</fromDeveloperId>
+                        <toAddresses>
+                            <toAddress implementation="java.lang.String">orla.darcy@gmail.com</toAddress>
+                            <toAddress implementation="java.lang.String">desmond.kirrane@gmail.com</toAddress>
+                        </toAddresses>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
