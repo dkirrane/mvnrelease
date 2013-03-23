@@ -19,7 +19,7 @@
     </scm>
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/dkirrane/mvnrelease/issues/</url>
+        <url>https://github.com/dkirrane/mvnrelease/issues</url>
     </issueManagement>
     <developers>
         <developer>
@@ -44,7 +44,7 @@
                         <tagNameFormat>@{project.artifactId}-v@{project.version}</tagNameFormat>
                     </configuration>
                 </plugin>
-                <plugin>
+                <!--                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-changes-plugin</artifactId>
                     <version>2.9</version>
@@ -57,14 +57,14 @@
                         <sslMode>true</sslMode>
                         <username>desmond.kirrane@gmail.com</username>
                         <password />
-                        <!--                        <senderString>Your Name <you@domain></senderString>-->
+                                                <senderString>Your Name <you@domain></senderString>
                         <fromDeveloperId>dkirrane</fromDeveloperId>
                         <toAddresses>
                             <toAddress implementation="java.lang.String">orla.darcy@gmail.com</toAddress>
                             <toAddress implementation="java.lang.String">desmond.kirrane@gmail.com</toAddress>
                         </toAddresses>
                     </configuration>
-                </plugin>
+                </plugin>-->
             </plugins>
         </pluginManagement>
     </build>
@@ -79,6 +79,24 @@
                     <reportSet>
                         <reports>
                             <report>github-report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.6</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>dependencies</report>
+                            <report>project-team</report>
+                            <report>mailing-list</report>
+                            <report>cim</report>
+                            <report>issue-tracking</report>
+                            <report>license</report>
+                            <report>scm</report>
                         </reports>
                     </reportSet>
                 </reportSets>
