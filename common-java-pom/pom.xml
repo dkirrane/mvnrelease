@@ -7,10 +7,14 @@
     <packaging>pom</packaging>
     <name>common-java-pom</name>
 
+    <!-- http://stackoverflow.com/questions/3243755/maven-error-releasing-code-to-github-hangs-after-push -->
     <scm>
+        <!-- GitHub Browsable location -->
         <url>https://github.com/dkirrane/mvnrelease.git</url>
-        <connection>scm:git:ssh:git@github.com:dkirrane/mvnrelease.git</connection>
-        <developerConnection>scm:git:ssh:git@github.com:dkirrane/mvnrelease.git</developerConnection>
+        <!-- GitHub Read Only URL scm:<scm type>:<readonly repo path> -->
+        <connection>scm:git:ssh://github.com/dkirrane/mvnrelease.git</connection>
+        <!-- GitHub Read Write URL scm:<scm type>:<readwrite repo path> -->
+        <developerConnection>scm:git:ssh://git@github.com:dkirrane/mvnrelease.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     <issueManagement>
