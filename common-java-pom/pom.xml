@@ -44,7 +44,7 @@
                         <tagNameFormat>@{project.artifactId}-v@{project.version}</tagNameFormat>
                     </configuration>
                 </plugin>
-                <!--                <plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-changes-plugin</artifactId>
                     <version>2.9</version>
@@ -57,14 +57,14 @@
                         <sslMode>true</sslMode>
                         <username>desmond.kirrane@gmail.com</username>
                         <password />
-                                                <senderString>Your Name <you@domain></senderString>
+                        <senderString>Desmond Kirrane @lt;you@domain@gt;</senderString>
                         <fromDeveloperId>dkirrane</fromDeveloperId>
                         <toAddresses>
                             <toAddress implementation="java.lang.String">orla.darcy@gmail.com</toAddress>
                             <toAddress implementation="java.lang.String">desmond.kirrane@gmail.com</toAddress>
                         </toAddresses>
                     </configuration>
-                </plugin>-->
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
