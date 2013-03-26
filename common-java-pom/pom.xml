@@ -29,6 +29,10 @@
         </developer>
     </developers>
 
+    <properties>
+        <confluence.home>http://localhost:8080</confluence.home>
+    </properties>
+
     <modules>
         <module>mavenproject1</module>
     </modules>
@@ -63,6 +67,39 @@
                             <toAddress implementation="java.lang.String">orla.darcy@gmail.com</toAddress>
                             <toAddress implementation="java.lang.String">desmond.kirrane@gmail.com</toAddress>
                         </toAddresses>
+                    </configuration>
+                </plugin>
+                <!-- https://code.google.com/p/maven-confluence-plugin/wiki/Usage -->
+                <!-- http://docs.codehaus.org/display/MVNCONFSITE/maven-confluence-reporting-plugin-3.3.0-beta3 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.2</version>
+                    <inherited>true</inherited>
+                    <configuration>
+                        <reportPlugins>
+                            <plugin>
+                                <groupId>org.bsc.maven</groupId>
+                                <artifactId>maven-confluence-reporting-plugin</artifactId>
+                                <version>3.3.0-beta3</version>
+                                <reportSets>
+                                    <reportSet>
+                                        <id>confluence</id>
+                                        <configuration>
+                                            <endPoint>${confluence.home}/rpc/xmlrpc</endPoint>
+                                            <spaceKey>DOCS</spaceKey>
+                                            <serverId>my_confluence_server</serverId>
+                                            <parentPageTitle>Home</parentPageTitle><!-- PARENT PAGE IN THE GIVEN SPACE -->
+                                            <title>custom_title</title><!-- PAGE TITLE (default {project.build.finalName}) - SINCE 3.1.3 -->
+                                            <removeSnapshots>true</removeSnapshots>
+                                        </configuration>
+                                        <reports>
+                                            <report>confluence-summary</report>
+                                        </reports>
+                                    </reportSet>
+                                </reportSets>
+                            </plugin>
+                        </reportPlugins>
                     </configuration>
                 </plugin>
             </plugins>

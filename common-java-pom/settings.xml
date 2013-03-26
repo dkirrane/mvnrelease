@@ -20,5 +20,11 @@
             <username>admin</username>
             <password>admin123</password>
         </server>
+        <!-- http://docs.codehaus.org/display/MVNCONFSITE/maven-confluence-reporting-plugin-3.3.0-beta3#maven-confluence-reporting-plugin-330-beta3-Changewikifilesextension -->
+        <server>
+            <id>my_confluence_server</id>
+            <username>my_user</username>
+            <password>my_password</password>
+        </server>
     </servers>
 </settings>

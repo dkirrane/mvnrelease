@@ -58,6 +58,9 @@
             <displayName>site</displayName>
             <goals>
                 <goal>site</goal>
+                <goal>-s</goal>
+                <goal>settings.xml</goal>
             </goals>
         </action>
+    
 </actions>
